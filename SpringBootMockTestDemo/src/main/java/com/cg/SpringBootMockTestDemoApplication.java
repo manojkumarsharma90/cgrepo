@@ -9,7 +9,7 @@ public class SpringBootMockTestDemoApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootMockTestDemoApplication.class, args);
 
-	    System.out.println("Line1");
+	    System.out.println("Manoj");
 
 		
 		
