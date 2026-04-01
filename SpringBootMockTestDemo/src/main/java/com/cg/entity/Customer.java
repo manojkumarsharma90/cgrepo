@@ -7,6 +7,7 @@ public class Customer {
 	
 	private String phnNo;
 
+	private String email;
 	public Integer getId() {
 		return id;
 	}
