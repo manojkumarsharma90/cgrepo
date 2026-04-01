@@ -4,6 +4,8 @@ public class Customer {
 	private Integer id;
 	
 	private String name;
+	
+	private String phnNo;
 
 	public Integer getId() {
 		return id;
