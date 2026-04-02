@@ -1,5 +1,9 @@
 package com.cg.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Account {
 	
 	
@@ -15,6 +19,7 @@ public class Account {
 	}
 	
 	
+	@Id
 	private Integer accountId;
 	private String custName;
 	private Double amt;

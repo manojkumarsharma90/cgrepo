@@ -43,20 +43,20 @@ public class TransferFundsTest {
 	}
 	
 	
+
 @Test
 public void testTransferFund1() {
-	
-	Mockito.when(repo.findById(1001)).thenReturn(optAcc1);
-	Mockito.when(repo.findById(1002)).thenReturn(optAcc2);
-	Mockito.when(repo.save(Mockito.any(Account.class))).thenReturn(new Account());
-	assertTrue(service.transferFund(1001, 1002, 2000.0));
-	Mockito.verify(repo).findById(1001);
-	Mockito.verify(repo).findById(1002);
-	Mockito.verify(repo).save(Mockito.any(Account.class));
-	
-	
-}
+    
+    Mockito.when(repo.findById(1001)).thenReturn(optAcc1);
+    Mockito.when(repo.findById(1002)).thenReturn(optAcc2);
+    Mockito.when(repo.save(Mockito.any(Account.class))).thenReturn(new Account());
 
+    assertTrue(service.transferFund(1001, 1002, 2000.0));
+
+    Mockito.verify(repo).findById(1001);
+    Mockito.verify(repo).findById(1002);
+    Mockito.verify(repo, Mockito.times(2)).save(Mockito.any(Account.class)); // ✅ FIX
+}
 @Test
 public void testTransferFund2() {
 	
